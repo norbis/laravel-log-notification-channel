@@ -1,0 +1,43 @@
+{
+    "name": "norbis/laravel-log-notification-channel",
+    "description": "Log Notification Channel for Laravel",
+    "keywords": [
+        "laravel",
+        "notifications",
+        "smsgate",
+        "dengisrazy"
+    ],
+    "homepage": "https://github.com/norbis/laravel-log-notification-channel.git",
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0",
+        "laravel/framework": "^8.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.4.2",
+        "phpunit/phpunit": "^9.3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "NotificationChannels\\LogChannel\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NotificationChannels\\LogChannel\\Test\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NotificationChannels\\LogChannel\\LogChannelServiceProvider"
+            ]
+        }
+    }
+}
